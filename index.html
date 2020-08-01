@@ -38,24 +38,37 @@
         <a class="js-scroll-trigger" href="#page-top">Menu</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#page-top">Home</a>
+        <a class="js-scroll-trigger" href="#page-top"><i class="fas fa-robot"></i> Home</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#about">About</a>
+        <a class="js-scroll-trigger" href="#about"><i class="fas fa-info-circle"></i> About</a>
       </li>
     </ul>
   </nav>
 
   <!-- Header -->
-  <header class="masthead d-flex" style="background: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80') center fixed no-repeat; background-size: cover;">
-    <div class="container text-center my-auto" style="color: white;">
-      <h1 class="mb-1" style="text-shadow: 0px 0px 5px white;">RaffleBot2000</h1>
-      <p class="lead mb-5">
-        Draw random winners to your Twitter raffles here. For... FREE! :)
-      </p>
-      <a class="btn btn-secondary btn-xl js-scroll-trigger" href="#">Draw Now</a>
-    </div>
-    <div class="overlay"></div>
+  <header class="d-flex" style="background-image: none;">
+      <!-- style="background: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80') center fixed no-repeat; background-size: cover;"-->
+        <div class="parallax-window h-100" data-parallax="scroll" data-image-src="/img/space-bg.jpg">
+            <div class="col-lg-6 text-center" style="color: white; margin: auto;">
+                <div class="bg-shadow" style="border-radius: 0.5rem; padding: 5rem;">
+                    <h1 class="mb-1" style="text-shadow: 0px 0px 5px white;"><i class="fas fa-robot"></i> RaffleBot2000</h1>
+                    <br>
+                    <p class="lead">Draw random winners to your Twitter raffles here. For... FREE! :)</p>
+                </div>
+                <br/>
+                <div class="container">
+                    <div class="bg-fog" style="padding: 1.5rem; border-radius: 0.5rem; margin: auto;">
+                        <label for="tweeturl">Tweet URL:</label>
+                        <input type="text" id="tweeturl" name="tweeturl">
+                    </div>
+                    <div style="margin-top: 1.5rem;" align="right">
+                        <input type="submit" class="btn btn-dark">
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="overlay"></div>
   </header>
 
   <!-- About -->
@@ -70,9 +83,9 @@
         </div>
       </div>
       <div class="row col-lg-5" style="margin: auto;">
-        <a class="img-button" style="margin: auto; background-image: url('https://pbs.twimg.com/profile_images/1211709296846790656/CEsyRxaA_400x400.png');" href="https://twitter.com/zazsaysstuff" title="ZazSaysStuff">
+        <a class="img-button" style="margin: auto; background-image: url('https://pbs.twimg.com/profile_images/1211709296846790656/CEsyRxaA_400x400.png');" href="https://twitter.com/zazsaysstuff">
             <p><i style="position: relative; top: 5.3rem; left: 5.3rem; font-size: 150%; color: white;" class="fa fa-link" aria-hidden="true"></i></p></a>
-        <a class="img-button" style="margin: auto; background-image: url('https://pbs.twimg.com/profile_images/1286725609285210112/vCom1LTZ_400x400.png');" href="https://twitter.com/hartchl_" title="Hatchl">
+        <a class="img-button" style="margin: auto; background-image: url('https://pbs.twimg.com/profile_images/1286725609285210112/vCom1LTZ_400x400.png');" href="https://twitter.com/hartchl_">
             <p><i style="position: relative; top: 5.3rem; left: 5.3rem; font-size: 150%; color: white;" class="fa fa-link" aria-hidden="true"></i></p></a>
     </div>
     </div>
@@ -99,6 +112,8 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="/js/parallax.js-1.5.0/parallax.js"></script>
 
 </body>
 
