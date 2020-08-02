@@ -47,26 +47,25 @@
   </nav>
 
   <!-- Header -->
-  <header class="d-flex" style="background-image: none;">
-      <!-- style="background: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80') center fixed no-repeat; background-size: cover;"-->
-        <div class="parallax-window h-100" data-parallax="scroll" data-image-src="/img/space-bg.jpg">
-          <div class="col-lg-6 text-center" style="color: white; margin: auto;">
-            <div class="bg-shadow" style="border-radius: 0.5rem; padding: 5rem;">
-              <h1 class="mb-1" style="text-shadow: 0px 0px 5px white;"><i class="fas fa-robot"></i> RaffleBot</h1>
-              <br>
-              <p class="lead">Draw random winners to your Twitter raffles here. For... FREE! :)</p>
-            </div>
-              <br/>
-              <div class="bg-fog" style="padding: 1.5rem; border-radius: 0.5rem;">
-                <label for="tweeturl">Tweet URL:</label>
-                <input type="text" id="tweeturl" name="tweeturl">
-              </div>
-              <div style="margin-top: 1.5rem;" align="right">
-                <input type="submit" class="btn btn-dark">
-              </div>
-            </div>
+  <header class="masthead d-flex">
+    <div class="col-lg-6 text-center h-100" style="color: white; margin: auto;">
+      <div class="bg-shadow" style="border-radius: 0.5rem; padding: 3rem;">
+        <h1 class="mb-1" style="text-shadow: 0px 0px 5px rgb(237, 184, 7); letter-spacing: 0.3rem; color: #ecb807;"><i class="fas fa-robot"></i> RaffleBot</h1>
+        <br>
+        <p class="col-lg-10" style="margin: auto;">Enter the URL of a tweet with more than one retweets below, as well as the number of winners, then press 'Submit'.</p>
+      </div>
+      <br/>
+      <div class="bg-fog" style="border-radius: 0.5rem; padding: 3rem;">
+        <div style="margin: auto;">
+          <label class="h5" for="tweeturl">Tweet URL: &nbsp;</label>
+          <input type="text" id="tweeturl" name="tweeturl" style="border: 1px black;">
         </div>
-            <div class="overlay"></div>
+      </div>
+      <div style="margin-top: 1.5rem;" align="right">
+        <input type="submit" class="btn btn-secondary">
+      </div>
+    </div>
+    <div class="overlay"></div>
   </header>
 
   <!-- About -->
