@@ -56,17 +56,35 @@
       </div>
       <br/>
       <div class="bg-fog" style="border-radius: 0.5rem; padding: 3rem;">
+
+        <!-- URL Input -->
         <div style="margin: auto;">
           <label class="h5" for="tweeturl">Tweet URL: &nbsp;</label>
           <input type="text" id="tweeturl" name="tweeturl" style="border: 1px black;">
         </div>
+
+        <!-- Number of Winners Input-->
+        <div style="margin: auto;">
+          <label class="h5" for="winnernum">Number of Winners: &nbsp;</label>
+          <input type="number" id="winnernum" name="winnernum" style="border: 1px black;">
+        </div>
+
+        <!-- Must be Following? Check Box -->
+        <div style="margin: auto;">
+          <label class="h5" for="mustfollow">Must be following? &nbsp;</label>
+          <input type="checkbox" id="mustfollow" name="mustfollow" style="border: 1px black;">
+        </div>
       </div>
+
       <div style="margin-top: 1.5rem;" align="right">
+
         <!-- Input Button -->
         <input type="submit" class="btn btn-secondary" id="input-button">
       </div>
+
       <!-- Div Where Results are Stored-->
-      <div style= "margin-top: 1.5rem;" id = "result-div"></div>
+      <div class="bg-fog" style= "margin-top: 1.5rem; padding: 3rem; border-radius: 0.5rem; margin: auto; text-align: center;" id = "result-div"></div>
+
     </div>
     <div class="overlay"></div>
   </header>
