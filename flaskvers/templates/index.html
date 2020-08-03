@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>RaffleBot2000</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href= {{ url_for('static', filename = "vendor/bootstrap/css/bootstrap.min.css") }} rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href= {{ url_for('static', filename = "vendor/fontawesome-free/css/all.min.css") }} rel="stylesheet" type="text/css">
+  <link href= {{ url_for('static', filename = "https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&display=swap") }} rel="stylesheet" type="text/css">
+  <link href= {{ url_for('static', filename = "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic") }} rel="stylesheet" type="text/css">
+  <link href= {{ url_for('static', filename = "vendor/simple-line-icons/css/simple-line-icons.css") }} rel="stylesheet">
+  
+
+  <!-- Custom CSS -->
+  <link href= {{ url_for('static', filename = "css/stylish-portfolio.min.css") }} rel="stylesheet">
+  <link href= {{ url_for('static', filename = "css/stylish-portfolio.css") }} rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+  <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#page-top">Menu</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#page-top"><i class="fas fa-robot"></i> Home</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#about"><i class="fas fa-info-circle"></i> About</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead d-flex">
+    <div class="col-lg-6 text-center h-100" style="color: white; margin: auto;">
+      <div class="bg-shadow" style="border-radius: 0.5rem; padding: 3rem;">
+        <h2 class="mb-1" style="text-shadow: 0px 0px 5px rgb(237, 184, 7); letter-spacing: 0.3rem; color: #ecb807;"><i class="fas fa-robot"></i> RaffleBot</h2>
+        <br>
+        <p class="col-lg-10" style="margin: auto;">Enter the URL of a tweet with more than one retweets below, as well as the number of winners, then press 'Submit'.</p>
+      </div>
+      <br/>
+      <div class="bg-fog" style="border-radius: 0.5rem; padding: 3rem;">
+        <div style="margin: auto;">
+          <label class="h5" for="tweeturl">Tweet URL: &nbsp;</label>
+          <input type="text" id="tweeturl" name="tweeturl" style="border: 1px black;">
+        </div>
+      </div>
+      <div style="margin-top: 1.5rem;" align="right">
+        <input type="submit" class="btn btn-secondary">
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </header>
+
+  <!-- About -->
+  <section class="content-section bg-secondary" id="about">
+    <div class="container">
+      <div class="row" style="color: white;">
+        <div class="col-lg-10 mx-auto">
+          <h2><i class="fa fa-info-circle"></i> About Us</h2>
+          <p class="lead mb-5">RaffleBot was made out of frustration for a lack of simple, user-friendly, and <strong style="text-transform: uppercase;">free</strong> raffle-drawing options for Twitter.
+            This tool was made by <strong>Izzy</strong> (ZazSaysStuff) and <strong>Charlie</strong> (Hatchl) using Github, Twitter's API, Python, and a free bootstrap template.<br/>
+            </p>
+        </div>
+      </div>
+      <div class="row col-lg-5" style="margin: auto;">
+        <a class="img-button" style="margin: auto; background-image: url('https://pbs.twimg.com/profile_images/1211709296846790656/CEsyRxaA_400x400.png');" href="https://twitter.com/zazsaysstuff">
+            <p><i style="position: relative; top: 5.3rem; left: 5.3rem; font-size: 150%; color: white;" class="fa fa-link" aria-hidden="true"></i></p></a>
+        <a class="img-button" style="margin: auto; background-image: url('https://pbs.twimg.com/profile_images/1286725609285210112/vCom1LTZ_400x400.png');" href="https://twitter.com/hartchl_">
+            <p><i style="position: relative; top: 5.3rem; left: 5.3rem; font-size: 150%; color: white;" class="fa fa-link" aria-hidden="true"></i></p></a>
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p class="text-muted small mb-0">Copyright &copy; RaffleBot2000 2020</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/stylish-portfolio.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="/js/parallax.js-1.5.0/parallax.js"></script>
+
+</body>
+
+</html>
