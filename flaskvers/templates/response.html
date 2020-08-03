@@ -1,6 +1,10 @@
 <h5>The winner(s) are:</h5>
 
 <ul>
+    {% for error in errors %}
+        <li>{{error}}</li>
+    {% endfor %}
+    
     {% for user in list %}
         <li>{{user}}</li>
     {% endfor %}

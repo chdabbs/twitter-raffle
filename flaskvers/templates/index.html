@@ -65,21 +65,21 @@
 
         <!-- Number of Winners Input-->
         <div style="margin: auto;">
-          <label class="h5" for="winnernum">Number of Winners: &nbsp;</label>
-          <input type="number" id="winnernum" name="winnernum" style="border: 1px black;">
+          <label class="h5" id="winnernum" for="winnernum">Number of Winners: &nbsp;</label>
+          <input type="number" id="resultnum" name="winnernum" value=1 style="border: 1px black;">
         </div>
 
         <!-- Must be Following? Check Box -->
         <div style="margin: auto;">
-          <label class="h5" for="mustfollow">Must be following? &nbsp;</label>
-          <input type="checkbox" id="mustfollow" name="mustfollow" style="border: 1px black;">
+          <label class="h5" id="mustfollow" for="mustfollow">Must be following? &nbsp;</label>
+          <input type="checkbox" id="followinput" name="mustfollow" style="border: 1px black;">
         </div>
       </div>
 
       <div style="margin-top: 1.5rem;" align="right">
 
         <!-- Input Button -->
-        <input type="submit" class="btn btn-secondary" id="input-button">
+        <input type="submit" class="btn btn-secondary" id="inputbutton">
       </div>
 
       <!-- Div Where Results are Stored-->
@@ -135,7 +135,7 @@
 
   <!-- Script for Input Button -->
   <script>
-    $('#input-button').click(function(){
+    $('#inputbutton').click(function(){
 
       //Parse Tweet ID
       var tweetURL = $('#tweeturl').val().toString().split('/');
@@ -146,10 +146,17 @@
         //Parse Out Extra Data
         var tweetID = tweetID.split('?')[0];
 
+        //Get Result Size
+        var resultSize = $('#resultnum').val();
+
+        //Get Need Follow 'Bool'
+        var needFollow = 1
+        if($('#followinput').val() == false) needFollow = -1
+        
         //Perform AJAX Request
         $.ajax({
 
-          url: "/" + tweetID.toString(), //<--- ID Goes Here
+          url: "/" + tweetID.toString() + "/" + resultSize.toString() + "/" + needFollow.toString(),
           type: "POST",
           success: function(resp){
 
