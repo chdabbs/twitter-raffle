@@ -62,8 +62,11 @@
         </div>
       </div>
       <div style="margin-top: 1.5rem;" align="right">
-        <input type="submit" class="btn btn-secondary">
+        <!-- Input Button -->
+        <input type="submit" class="btn btn-secondary" id="input-button">
       </div>
+      <!-- Div Where Results are Stored-->
+      <div style= "margin-top: 1.5rem;" id = "result-div"></div>
     </div>
     <div class="overlay"></div>
   </header>
@@ -101,16 +104,52 @@
   </a>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src={{ url_for('static', filename = "vendor/jquery/jquery.min.js") }}></script>
+  <script src={{ url_for('static', filename = "vendor/bootstrap/js/bootstrap.bundle.min.js") }}></script>
 
   <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src={{ url_for('static', filename = "vendor/jquery-easing/jquery.easing.min.js") }}></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/stylish-portfolio.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="/js/parallax.js-1.5.0/parallax.js"></script>
+  <script src={{ url_for('static', filename = "js/stylish-portfolio.min.js") }}></script>
+  <script src={{ url_for('static', filename = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js") }}></script>
+  <script src={{ url_for('static', filename = "/js/parallax.js-1.5.0/parallax.js") }}></script>
+
+  <!-- Script for Input Button -->
+  <script>
+    $('#input-button').click(function(){
+
+      //Parse Tweet ID
+      var tweetURL = $('#tweeturl').val().toString().split('/');
+      var tweetID = tweetURL[tweetURL.length - 1];
+
+      if(tweetID != "")
+      {
+        //Parse Out Extra Data
+        var tweetID = tweetID.split('?')[0];
+
+        //Perform AJAX Request
+        $.ajax({
+
+          url: "/" + tweetID.toString(), //<--- ID Goes Here
+          type: "POST",
+          success: function(resp){
+
+            $('#result-div').append(resp.data);
+
+          }
+
+        });
+      }
+      
+      //No Tweet Error
+      else
+      {
+        alert('No tweet has been entered.');
+      }
+
+    });
+  </script>
 
 </body>
 
