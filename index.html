@@ -55,15 +55,40 @@
         <p class="col-lg-10" style="margin: auto;">Enter the URL of a tweet with more than one retweets below, as well as the number of winners, then press 'Submit'.</p>
       </div>
       <br/>
-      <div class="bg-fog" style="border-radius: 0.5rem; padding: 3rem;">
+      
+
+      
+      <div class="bg-fog" style="border-radius: 0.5rem; padding: 3rem; text-align: left;">
+
+        <!-- URL Input -->
         <div style="margin: auto;">
           <label class="h5" for="tweeturl">Tweet URL: &nbsp;</label>
-          <input type="text" id="tweeturl" name="tweeturl" style="border: 1px black;">
+          <input type="text" id="tweeturl" name="tweeturl">
+        </div>
+        <br>
+
+        <!-- Number of Winners Input-->
+        <div style="margin: auto;">
+          <label class="h5" id="winnernum" for="winnernum">Number of Winners: &nbsp;</label>
+          <input type="number" id="resultnum" name="winnernum" value=1>
+        </div>
+        <br>
+
+        <!-- Must be Following? Check Box -->
+        <div style="margin: auto;">
+          <label class="h5" id="mustfollow" for="mustfollow">Must be following? &nbsp;</label>
+          <input type="checkbox" id="followinput" name="mustfollow">
         </div>
       </div>
+
       <div style="margin-top: 1.5rem;" align="right">
-        <input type="submit" class="btn btn-secondary">
+
+        <!-- Submit Button -->
+        <input type="submit" class="btn btn-secondary" id="inputbutton">
       </div>
+      <br>
+
+
     </div>
     <div class="overlay"></div>
   </header>
@@ -84,7 +109,18 @@
             <p><i style="position: relative; top: 5.3rem; left: 5.3rem; font-size: 150%; color: white;" class="fa fa-link" aria-hidden="true"></i></p></a>
         <a class="img-button" style="margin: auto; background-image: url('https://pbs.twimg.com/profile_images/1286725609285210112/vCom1LTZ_400x400.png');" href="https://twitter.com/hartchl_">
             <p><i style="position: relative; top: 5.3rem; left: 5.3rem; font-size: 150%; color: white;" class="fa fa-link" aria-hidden="true"></i></p></a>
-    </div>
+      </div>
+
+      <br>
+
+      <!-- Kofi Links -->
+
+      <div class="row col-lg-5" style="margin: auto;">
+        <a class="kofi-button" style="margin: auto;" href="https://twitter.com/zazsaysstuff" title="Izzy's Ko-fi"></a>
+        <a class="kofi-button" style="margin: auto;" href="https://ko-fi.com/hatchl" title="Charlie's Ko-fi"></a>
+
+      </div>
+
     </div>
   </section>
 

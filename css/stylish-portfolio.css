@@ -93,8 +93,7 @@ h6 {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("../img/space-bg.jpg");
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/space-bg.jpg");
+  background: url("../img/space-bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -400,6 +399,28 @@ a:hover, a:focus, a:active {
   transition: all 0.4s ease 0s;
  } 
 
+ .kofi-button { 
+  width: 7rem;
+  height: 3rem;
+  background-image: url("../img/Kofi_pixel_logo.png");
+  background-color: white;
+  background-size: 2rem auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5rem;
+  color: black;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+ }
+
+ .kofi-button:hover {
+  color: #373d3f;
+  background-color: #dbe4e7;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+ } 
+
  .bg-secondary {
    background-color: #ecb807 !important;
  }
@@ -421,3 +442,29 @@ a:hover, a:focus, a:active {
  .bg-fog {
   background: rgba(52, 58, 64, 0.5);
  }
+
+ input {
+   width: 100%;
+   border: 1px black;
+   border-radius: 5rem;
+   padding-left: 1rem;
+   padding-top: 0.5rem;
+   padding-bottom: 0.5rem;
+   padding-right: 1rem;
+   background-color: #ecb807;
+ }
+
+ input[type=submit] {
+  width: 8rem;
+  border-radius: 5rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+}
+
+
+ input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
